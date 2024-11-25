@@ -11,17 +11,12 @@ type Props = {
   loading: boolean;
 };
 
-const TodoItem: React.FC<Props> = ({ todo, loading }) => {
+const TodoItem: React.FC<Props> = ({ todo }) => {
   return (
     <div
       key={todo.id}
       data-cy="Todo"
-      className={cn(
-        'todo item-enter-active',
-        { completed: todo.completed },
-        { 'item-enter': loading },
-        { 'item-enter-active': !loading },
-      )}
+      className={cn('todo', { completed: todo.completed })}
     >
       <label className="todo__status-label">
         <input
