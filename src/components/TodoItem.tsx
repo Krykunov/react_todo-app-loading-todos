@@ -8,7 +8,7 @@ import { Todo } from '../types/Todo';
 
 type Props = {
   todo: Todo;
-  loading: boolean;
+  isLoading: boolean;
 };
 
 const TodoItem: React.FC<Props> = ({ todo }) => {
